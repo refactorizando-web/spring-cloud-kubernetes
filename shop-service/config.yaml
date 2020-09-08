@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shop-service
+data:
+  application.properties: |-
+    configmap.message=Services : %s

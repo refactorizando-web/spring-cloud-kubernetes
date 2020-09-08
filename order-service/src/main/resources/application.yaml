@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: order-service
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+    secrets:
+      name: db-secret
+  data:
+    mongodb:
+      host: mongodb-service
+      port: 27017
+      database: admin
+      username: ${MONGO_USERNAME}
+      password: ${MONGO_PASSWORD}
+management:
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+    restart:
+      enabled: true
+
+

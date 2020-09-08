@@ -1,0 +1,33 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: shop-service
+spec:
+  selector:
+    app: shop-service
+  ports:
+    - protocol: TCP
+      port: 8080
+      nodePort: 30083
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop-service
+spec:
+  selector:
+    matchLabels:
+      app: shop-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shop-service
+    spec:
+      containers:
+        - name: shop-service
+          image: shop-service:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

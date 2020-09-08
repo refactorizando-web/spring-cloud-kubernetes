@@ -1,0 +1,17 @@
+
+spring:
+  application.name: shop-service
+  cloud.kubernetes.reload.enabled: true #Activo para cuando configMap o Secrets cambian
+server.port: 8080
+management:
+  endpoint:
+    restart:
+      enabled: true
+    health:
+      enabled: true
+    info:
+      enabled: true
+ribbon:
+  http:
+    client:
+      enabled: true
