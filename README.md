@@ -4,7 +4,10 @@ This project born with the aim to show how deploy a two Spring Cloud application
 
 This project use differents kubernetes objects such as secrets, configmaps, services and deployments. 
 
-If you have any doubt you can read documentation and details into: https://refactorizando.com/microservicios-spring-cloud-kubernetes
+If you have any doubt you can read documentation and details into: 
+
+* Spanish: https://refactorizando.com/microservicios-spring-cloud-kubernetes
+* English: https://refactorizando.com/en/microservices-spring-cloud-kubernetes/
 
 ## How can I run it?
 
